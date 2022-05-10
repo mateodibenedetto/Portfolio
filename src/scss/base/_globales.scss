@@ -1,0 +1,54 @@
+@use 'variables' as v;
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+*::selection {
+    background-color: v.$morado2;
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: v.$fuente;
+    font-size: 1.6rem;
+    min-height: 100%;
+}
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contenedor-sm {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+::-webkit-scrollbar{
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: v.$morado1;
+}
+::-webkit-scrollbar-track {
+    background: v.$morado1;
+}
+::-webkit-scrollbar-thumb{
+    background-color: v.$morado5;
+    border-radius: .5rem;
+    height: 2rem;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: v.$morado6;
+}

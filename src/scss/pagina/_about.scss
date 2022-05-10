@@ -1,0 +1,194 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.sobre-mi {
+    color: v.$blanco;
+    background-color: v.$morado6;
+    min-height: 100vh;
+
+    .title {
+        padding-top: 10rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        
+        h1 {
+            font-size: 30px;
+            font-weight: 600;
+            color: #ddd;
+            margin-bottom: 1rem;
+
+            @include m.tablet {
+                font-size: 38px;
+                margin-bottom: 1.5rem;
+            }
+        }
+    
+        h2 {
+            background:v.$morado1;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+            display: inline-block;
+            padding: 4px 10px;
+            color: v.$blanco;
+            margin: 7px 0;
+            clear: both;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 50px;
+
+            @include m.tablet {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .left-about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     
+        p {
+            color: v.$blanco;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 28px;
+            margin-bottom: 20px;
+            margin: 1rem;
+            
+            
+            @include m.tablet {
+                font-size: 14px;
+                margin-left: 0;
+            }
+
+            @include m.desktop {
+                font-size: 16px;
+            }
+        }
+    
+        .button-download {
+            background: none;
+            color: v.$blanco;
+            border: 4px solid v.$morado5;
+            margin: 10px 0;
+            font-size: 10px;
+            max-width: 230px;
+            padding: 10px 19px;
+            transition: all .4s;
+            text-decoration: none;
+            align-self: center;
+            border-radius: .2rem;
+
+            @include m.tablet {
+                align-self: flex-start;
+                font-size: 15px;
+            }
+            
+            &:hover {
+                background-color: v.$morado5;
+                color: #eee;
+            }
+        }
+    }
+    
+    .image {
+        display: flex;
+        justify-content: center;
+     
+        img {
+            max-width: 240px;
+            border: 6px solid v.$morado5;
+            margin-bottom: 50px;
+            border-radius: .2rem;
+
+            @include m.tablet {
+                max-height: 300px;
+            }
+
+            @include m.desktop {
+                min-width: 300px;
+                max-height: 400px;
+            }
+        }
+    }
+       
+    .skills {
+        margin-bottom: 30px;
+        padding: 1rem;
+        padding-right: 3rem;
+
+        @include m.telefono {
+            padding: 0;
+        }
+
+        h5 {
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: v.$blanco;
+            margin: 3px 0 9px;
+            margin-left: 35px;
+            
+            @include m.tablet{ 
+                font-size: 12px;
+            }
+
+            @include m.desktop {
+                font-size: 15px;
+            }
+
+            span {
+                float: right;
+            }
+        }
+
+        .progress {
+            height: 8px;
+            overflow: hidden;
+            background-clip: v.$blanco;
+            margin-bottom: 40px;
+            border-radius: 3px;
+            margin-left: 35px;
+        }
+        
+        .progress-bar {
+            float: left;
+            width: 0;
+            height: 100%;
+            background-color: v.$morado5;
+        }
+    }     
+}
+
+@media screen and (min-width: 725px) {
+.container__about{
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 2rem;
+    padding: 1rem;
+}
+
+.title h1 {
+    font-size: 46px;
+}
+
+.left-about p {
+    font-size: 20px;
+}
+
+.button-download {
+    font-size: 16px;
+    align-self: flex-start;
+}
+
+.image img {
+    max-width: 340px;
+}
+
+.skills h5 {
+    font-size: 16px;
+}
+
+.progress {
+    height: 10px;
+}
+}

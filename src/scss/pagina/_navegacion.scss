@@ -1,0 +1,64 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.nav {
+    width: 100%;
+    background-color: v.$morado1;
+    position: fixed;
+    z-index: 99;
+    height: 60px;
+    top: 0;  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.080);
+
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        column-gap: 1rem;
+        list-style: none;
+        margin-bottom: 0;
+        
+
+        li {
+            padding: .5rem;
+
+
+            a {
+                color: v.$blanco;
+                font-size: 1rem;
+                text-decoration: none;
+                transition: ease-in-out .4s;
+
+                @include m.telefono {
+                    font-size: 1.2rem;
+                }
+
+
+                @include m.tablet {
+                    font-size: 1.5rem;
+                }
+
+                    
+                &:hover {
+                    color: rgb(194, 129, 255);
+                }
+            
+            }
+
+            &:last-child {
+                margin-right: 1rem;
+            }
+
+        }
+
+
+    }
+    
+    
+
+} 
+
+

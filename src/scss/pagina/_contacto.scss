@@ -1,0 +1,117 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+#contacto {
+   background-color: v.$morado6;
+   padding-top: 5rem;
+}
+
+.contacto {
+    padding-top: 6rem;
+    min-height: 100vh;
+
+    h1 {
+        color: #ddd;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .formulario {
+        color: #fff;
+        border-radius: 15px;
+        padding: 2rem 5rem;
+
+        fieldset {
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+    
+        label {
+        font-size: 1rem;
+        }
+    
+        input, textarea {
+            margin-bottom: 1.5rem;
+            margin-top: 1rem;
+            padding: .4rem;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 1rem;
+            background: none;
+            border: 1.5px solid v.$morado5;
+            outline: none;
+            color: #eee;
+
+            &::placeholder {
+                text-align: left;
+                color: #eee;
+                font-weight: 300;
+                padding: 1rem 0;
+                font-family: 'Poppins', sans-serif;
+            }
+        }
+    
+        textarea::placeholder  {
+            padding: .2rem .2rem;
+        }
+    
+        .button {
+            padding: .6rem;
+            border: none;
+            color: #ccc;
+            outline: none;
+            width: 15rem;
+            cursor: pointer;
+            background-color:v.$morado5;
+            transition: all .4s;
+            border-radius: 5px;
+
+            &:hover {
+                background-color:v.$morado1;
+            }
+        }
+        
+    
+         textarea {
+            resize: none;
+        }
+    }
+
+    @include m.tablet {
+        .formulario {
+            padding: 2rem 10rem;
+        }
+        h1 {
+            font-size: 3rem;
+        }
+
+        .formulario input, .formulario textarea {
+            font-size: 1.5rem;   
+        }
+    
+        .formulario label {
+            font-size: 1.5rem;
+        }
+    
+        .formulario input {
+
+            &::placeholder {
+                font-size: 1.5rem;
+            }
+        }
+    
+        .formulario input {
+            padding: 1rem;
+        }
+    
+        .button {
+            font-size: 2rem;
+            width: 15rem;
+        }
+    }
+}
+
