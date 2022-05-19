@@ -2,116 +2,299 @@
 @use '../base/mixins' as m;
 
 
-#contacto {
-   background-color: v.$morado6;
-   padding-top: 5rem;
-}
+// #contacto {
+//    background-color: v.$morado6;
+//    padding-top: 5rem;
+// }
 
-.contacto {
-    padding-top: 6rem;
-    min-height: 100vh;
+// .contacto {
+//     padding-top: 6rem;
+//     min-height: 100vh;
 
-    h1 {
-        color: #ddd;
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 600;
-    }
+//     h1 {
+//         color: #ddd;
+//         text-align: center;
+//         font-size: 2rem;
+//         font-weight: 600;
+//     }
 
-    .formulario {
-        color: #fff;
-        border-radius: 15px;
-        padding: 2rem 5rem;
+//     .formulario {
+//         color: #fff;
+//         border-radius: 15px;
+//         padding: 2rem 5rem;
 
-        fieldset {
-            border-radius: 5px;
-            border: none;
-            font-size: 1rem;
-        }
+//         fieldset {
+//             border-radius: 5px;
+//             border: none;
+//             font-size: 1rem;
+//         }
     
-        label {
-        font-size: 1rem;
-        }
+//         label {
+//         font-size: 1rem;
+//         }
     
-        input, textarea {
-            margin-bottom: 1.5rem;
-            margin-top: 1rem;
-            padding: .4rem;
-            border: none;
-            border-radius: 5px;
-            width: 100%;
-            font-size: 1rem;
-            background: none;
-            border: 1.5px solid v.$morado5;
-            outline: none;
-            color: #eee;
+//         input, textarea {
+//             margin-bottom: 1.5rem;
+//             margin-top: 1rem;
+//             padding: .4rem;
+//             border: none;
+//             border-radius: 5px;
+//             width: 100%;
+//             font-size: 1rem;
+//             background: none;
+//             border: 1.5px solid v.$morado5;
+//             outline: none;
+//             color: #eee;
 
-            &::placeholder {
-                text-align: left;
-                color: #eee;
-                font-weight: 300;
-                padding: 1rem 0;
-                font-family: 'Poppins', sans-serif;
-            }
-        }
+//             &::placeholder {
+//                 text-align: left;
+//                 color: #eee;
+//                 font-weight: 300;
+//                 padding: 1rem 0;
+//                 font-family: 'Poppins', sans-serif;
+//             }
+//         }
     
-        textarea::placeholder  {
-            padding: .2rem .2rem;
-        }
+//         textarea::placeholder  {
+//             padding: .2rem .2rem;
+//         }
     
-        .button {
-            padding: .6rem;
-            border: none;
-            color: #ccc;
-            outline: none;
-            width: 15rem;
-            cursor: pointer;
-            background-color:v.$morado5;
-            transition: all .4s;
-            border-radius: 5px;
+//         .button {
+//             padding: .6rem;
+//             border: none;
+//             color: #ccc;
+//             outline: none;
+//             width: 15rem;
+//             cursor: pointer;
+//             background-color:v.$morado5;
+//             transition: all .4s;
+//             border-radius: 5px;
 
-            &:hover {
-                background-color:v.$morado1;
-            }
-        }
+//             &:hover {
+//                 background-color:v.$morado1;
+//             }
+//         }
         
     
-         textarea {
-            resize: none;
-        }
+//          textarea {
+//             resize: none;
+//         }
+//     }
+
+//     @include m.tablet {
+//         .formulario {
+//             padding: 2rem 10rem;
+//         }
+//         h1 {
+//             font-size: 3rem;
+//         }
+
+//         .formulario input, .formulario textarea {
+//             font-size: 1.5rem;   
+//         }
+    
+//         .formulario label {
+//             font-size: 1.5rem;
+//         }
+    
+//         .formulario input {
+
+//             &::placeholder {
+//                 font-size: 1.5rem;
+//             }
+//         }
+    
+//         .formulario input {
+//             padding: 1rem;
+//         }
+    
+//         .button {
+//             font-size: 2rem;
+//             width: 15rem;
+//         }
+//     }
+// }
+
+.contact {
+    padding-top: 10rem;
+    background-color: v.$morado6;
+    min-height: 100vh;
+
+    .section__subtitle {
+        text-align: center;
+        color: #ddd;
+        margin-bottom: 1rem;
+    }
+    .section__title {
+        text-align: center;
+        font-size: 2rem;
+        color: #ddd;
+        margin-bottom: 4rem;
     }
 
     @include m.tablet {
-        .formulario {
-            padding: 2rem 10rem;
-        }
-        h1 {
+        .section__subtitle {
             font-size: 3rem;
         }
-
-        .formulario input, .formulario textarea {
-            font-size: 1.5rem;   
-        }
-    
-        .formulario label {
-            font-size: 1.5rem;
-        }
-    
-        .formulario input {
-
-            &::placeholder {
-                font-size: 1.5rem;
-            }
-        }
-    
-        .formulario input {
-            padding: 1rem;
-        }
-    
-        .button {
-            font-size: 2rem;
-            width: 15rem;
+        .section__title {
+            font-size: 4rem;
+            margin-bottom: 5rem;
         }
     }
+
 }
 
+.contact__container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 3rem;
+    padding-bottom: 3rem;
+    justify-content: center;
+    max-width: 95%;
+
+    @include m.tablet {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        column-gap: 3rem; 
+        margin: 0;
+    }
+
+  
+  .contact__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ddd;
+
+  }
+  
+  .contact__info {
+    display: grid;
+    gap: 1rem;
+   
+    @include m.tablet {
+        grid-template-columns: 300px;
+        justify-content: center;
+    }
+      
+    .contact__card {
+        background-color: v.$morado1;
+        padding: 1rem;
+        border-radius: .75rem;
+        
+        text-align: center;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.080);
+    }
+    
+    .contact__card-icon {
+        font-size: 2rem;
+        color: #ddd;
+        margin-bottom: .25rem;
+
+        @include m.tablet {
+            font-size: 3rem;
+        }
+    }
+    
+    .contact__card-title,
+    .contact__card-data {
+        font-size: 1.3rem;
+        color: #ddd;
+    }
+    
+    .contact__card-title {
+        font-weight: bolder;
+    }
+    
+    .contact__card-data {
+        display: block;
+        margin-bottom: .75rem;
+    }
+    
+    .contact__button {
+        color: #ddd;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: .25rem;
+    }
+    
+    .contact__button:hover .contact__button-icon {
+        transform: translateX(.25rem);
+    }
+    
+    .contact__button-icon {
+        font-size: 1rem;
+        transition: .4s;
+    }
+  }
+
+
+  .contact__form {
+    width: 400px;
+    margin: 0 auto;
+
+
+    @include m.desktop {
+        width: 500px;
+    }
+
+    .contact__form-div {
+        position: relative;
+        margin-bottom: 2rem;
+        height: 4rem;
+    }
+      
+    .contact__form-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid v.$morado5;
+        background: none;
+        color: #ddd;
+        outline: none;
+        padding: 1.5rem;
+        padding-top: 2.5rem;
+        border-radius: .75rem;
+        z-index: 1;
+    }
+    
+    .contact__form-tag {
+        position: absolute;
+        top: -.75rem;
+        left: 1.25rem;
+        font-size: 1.5rem;
+        padding: .25rem;
+        background-color: v.$morado6;
+        z-index: 10;
+        color: #ddd;
+    }
+    
+    .contact__form-area {
+        height: 11rem;
+        textarea {
+            resize: none;
+            }
+    }
+
+    .button {
+        display: inline-block;
+        background-color: v.$morado1;
+        color: #ddd;
+        padding: .73rem 1rem;
+        border-radius: .5rem;
+        transition: .4s;
+        border: none;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.080);
+
+
+        &:hover {
+            background-color: v.$morado6;
+        }
+    }
+  }
+  
+  
+}

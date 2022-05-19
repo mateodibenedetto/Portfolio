@@ -21,9 +21,11 @@ body {
     min-height: 100%;
 }
 .contenedor {
-    width: 95%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 .contenedor-sm {
     max-width: 70rem;
@@ -35,6 +37,12 @@ a {
 img {
     max-width: 100%;
 }
+
+.grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
 
 ::-webkit-scrollbar{
     width: .6rem;
