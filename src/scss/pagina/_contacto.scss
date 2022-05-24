@@ -175,14 +175,26 @@
         grid-template-columns: 300px;
         justify-content: center;
     }
+    @include m.desktop {
+        grid-template-columns: 400px;
+    }
+    @include m.xxl {
+        grid-template-columns: 500px;
+    }
+    @include m.xxl2 {
+        grid-template-columns: 700px;
+    }
       
     .contact__card {
         background-color: v.$morado1;
         padding: 1rem;
         border-radius: .75rem;
-        
         text-align: center;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.080);
+
+        // @include m.tablet {
+        //     width: 500px;
+        // }
     }
     
     .contact__card-icon {
@@ -231,12 +243,22 @@
 
 
   .contact__form {
-    width: 400px;
+    width: 100%;
     margin: 0 auto;
+    padding: 2rem;
 
 
     @include m.desktop {
         width: 500px;
+        margin: 0 auto;
+    }
+    @include m.xxl {
+        width: 600px;
+        margin: 0 auto;
+    }
+    @include m.xxl2 {
+        width: 700px;
+        margin: 0 auto;
     }
 
     .contact__form-div {
@@ -289,6 +311,9 @@
         border: none;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.080);
 
+        @include m.tablet {
+            padding: 1.5rem;
+        }
 
         &:hover {
             background-color: v.$morado6;

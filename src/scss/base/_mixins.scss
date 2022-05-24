@@ -16,6 +16,16 @@
         @content;
     }
 }
+@mixin xxl {
+    @media (min-width: v.$xxl) {
+        @content;
+    }
+}
+@mixin xxl2 {
+    @media (min-width: v.$xxl2) {
+        @content;
+    }
+}
 
 
 @mixin boton($bgColor, $colorTexto) {

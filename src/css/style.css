@@ -364,8 +364,6 @@ body {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
 }
 
 .contenedor-sm {
@@ -874,6 +872,21 @@ p {
     justify-content: center;
   }
 }
+@media (min-width: 1024px) {
+  .contact__container .contact__info {
+    grid-template-columns: 400px;
+  }
+}
+@media (min-width: 1300px) {
+  .contact__container .contact__info {
+    grid-template-columns: 500px;
+  }
+}
+@media (min-width: 1600px) {
+  .contact__container .contact__info {
+    grid-template-columns: 700px;
+  }
+}
 .contact__container .contact__info .contact__card {
   background-color: #54345e;
   padding: 1rem;
@@ -919,12 +932,26 @@ p {
   transition: 0.4s;
 }
 .contact__container .contact__form {
-  width: 400px;
+  width: 100%;
   margin: 0 auto;
+  padding: 2rem;
 }
 @media (min-width: 1024px) {
   .contact__container .contact__form {
     width: 500px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1300px) {
+  .contact__container .contact__form {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1600px) {
+  .contact__container .contact__form {
+    width: 700px;
+    margin: 0 auto;
   }
 }
 .contact__container .contact__form .contact__form-div {
@@ -972,6 +999,11 @@ p {
   transition: 0.4s;
   border: none;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
+}
+@media (min-width: 768px) {
+  .contact__container .contact__form .button {
+    padding: 1.5rem;
+  }
 }
 .contact__container .contact__form .button:hover {
   background-color: #41345e;
